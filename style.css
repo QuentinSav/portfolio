@@ -1,8 +1,8 @@
 html{
-    background-color: #e8e8e8;
     font-family: sans-serif;
     margin-top: 0;
-   }
+    background-image: linear-gradient(to right, rgb(70, 75, 101), rgb(138, 146, 147));
+}
 
 #push-btn-menu {
     left: 20px;
@@ -12,6 +12,7 @@ html{
     position: absolute;
     opacity: 0;
 }
+
 
 .rotate-icon-gif{
     color: #FF9900;
@@ -79,7 +80,7 @@ li{
 }
 
 li:hover{
-background-color: white;
+    background-color: white;
     color: black;
     letter-spacing: 0.3em;
     font-size: 1.5em
@@ -91,8 +92,8 @@ background-color: white;
     top: 0;
     left: -540px;
     overflow:hidden;
-    background-color: rgb(190, 190, 190);
-    box-shadow: 0px 0px 0px rgb(64, 64, 64);
+    background-color: white;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
     position: absolute;
     z-index: 11;
     opacity: 1;
