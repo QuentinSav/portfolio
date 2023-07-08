@@ -1,19 +1,12 @@
-/* Sets the width of the sidebar 
-to 250 and the left margin of the 
-page content to 250 */
-function openNav() {
-    document.getElementById(
-    "sidebar").style.width = "250px";
-    document.getElementById(
-    "main").style.marginLeft = "250px";
-}
+$(document).ready(function(){
+    $("#push-btn-menu").on("click", function(){
+        $("#lgMenu").css("box-shadow", "5px 5px 10px rgb(94, 158, 123)");
+        $("#lgMenu").addClass("enter");
+    });
+        
+    $("#exit").on("click", function(){
+        $("#lgMenu").css("box-shadow", "0px 0px 0px rgb(64, 64, 64)");
+        $("#lgMenu").removeClass("enter");
+    });
+});
 
-/* Set the width of the sidebar 
-to 0 and the left margin of the 
-page content to 0 */
-function closeNav() {
-    document.getElementById(
-    "sidebar").style.width = "0";
-    document.getElementById(
-    "main").style.marginLeft = "0";
-}
