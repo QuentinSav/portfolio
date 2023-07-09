@@ -1,64 +1,69 @@
 html{
     font-family: sans-serif;
     margin-top: 0;
-    background-image: linear-gradient(to right, rgb(70, 75, 101), rgb(138, 146, 147));
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(197, 209, 210);
 }
 
 #push-btn-menu {
-    left: 20px;
-    top: 20px;
     z-index: 111;
+    right: 10px;
+    top: 10px;
     cursor: pointer;
     position: absolute;
-    opacity: 0;
+    opacity: 1;
 }
 
-
-.rotate-icon-gif{
-    color: #FF9900;
-    -webkit-animation-name: spin_out;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: spin_out;
-    -moz-animation-duration: 1s;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: ease-in-out;
-    -ms-animation-name: spin_out;
-    -ms-animation-duration: 1000ms;
-    -ms-animation-iteration-count: 1;
-    -ms-animation-timing-function: ease-in-out;
-
-    animation-name: spin_out;
-    animation-duration: 1000ms;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both
+#push-btn-menu.active {
+    z-index: 111;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    position: absolute;
+    opacity: 1;
 }
-   
 
-.rotate-icon-gif:hover{
-    color: #FF9900;
-    -webkit-animation-name: spin_in;
-    -webkit-animation-duration: 500ms;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: spin_in;
-    -moz-animation-duration: 500ms;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: ease-in-out;
-    -ms-animation-name: spin_in;
-    -ms-animation-duration: 500ms;
-    -ms-animation-iteration-count: 1;
-    -ms-animation-timing-function: ease-in-out;
-
-    animation-name: spin_in;
-    animation-duration: 500ms;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both
+#lgMenu{
+    width: 40px;
+    height: 92%;
+    top: 4%;
+    left: 30px;
+    overflow:hidden;
+    background-image: linear-gradient(to left, rgba(70, 75, 101, 0), rgb(138, 146, 147, 0));
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    border-style: solid;
+    position: absolute;
+    z-index: 11;
+    opacity: 1;
+    transition: all 1s;
+    -webkit-transition: all 1s;
 }
-   
+
+#lgMenu.active {
+    width: 600px;
+    left: 30px;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    background-image: linear-gradient(to left, rgba(70, 75, 101, 1), rgba(138, 146, 147, 1));
+}
+
+#exit{
+    position: absolute;
+    right: 20px;
+    padding: 0px;
+    top: 20px;
+    z-index: 11;
+    cursor: pointer;
+    transition: all 2s;
+    -webkit-transition: all 2s;
+}
+
+#exit:hover{
+    color:#FF9900;
+}
+
 ul{
     list-style: none;
     padding: 0;
@@ -86,22 +91,6 @@ li:hover{
     font-size: 1.5em
 }
 
-#lgMenu{
-    width: 600px;
-    height: 100%;
-    top: 0;
-    left: -540px;
-    overflow:hidden;
-    background-color: white;
-    box-shadow: 0px 0px 0px rgb(25, 25, 25);
-    position: absolute;
-    z-index: 11;
-    opacity: 1;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    
-}
-
 #footer {
     position: absolute;
     bottom: 0;
@@ -109,25 +98,49 @@ li:hover{
     height: 50px;  
     z-index: 111;
     text-align: right; 
-    padding-right: 50px;        /* Footer height */
+    padding-right: 50px;  
 }
 
-#exit{
-    position: absolute;
-    right: 20px;
-    padding: 0px;
-    top: 20px;
-    cursor: pointer;
-    transition: all 2s;
-    -webkit-transition: all 2s;
-}
-#exit:hover{
-    color:#FF9900;
-}
+.rotate-icon-gif{
+    -webkit-animation-name: spin_out;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: spin_out;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in-out;
+    -ms-animation-name: spin_out;
+    -ms-animation-duration: 1000ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: ease-in-out;
 
-#lgMenu.enter{
-    opacity: 1;
-    left: 0px;
+    animation-name: spin_out;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both
+}  
+
+.rotate-icon-gif:hover{
+    -webkit-animation-name: spin_in;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: spin_in;
+    -moz-animation-duration: 500ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in-out;
+    -ms-animation-name: spin_in;
+    -ms-animation-duration: 500ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: ease-in-out;
+
+    animation-name: spin_in;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both
 }
 
 @-ms-keyframes spin_in {
