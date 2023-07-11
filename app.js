@@ -13,17 +13,13 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $(".box").on("click", function(){
-        const div = document.querySelector('.box');
-        
-        if (div.classList.contains('active')) {
-            $(".box").removeClass("active");
-        } else {
-            $(".box").addClass("active");
-        };
+    const boxes = document.querySelectorAll('.box');
+
+    boxes.forEach((box) => {
+    box.addEventListener('click', () => {
+        box.classList.toggle('active');
     });
-
+    });
 });
-
 
 

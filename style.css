@@ -1,10 +1,11 @@
 html{
-    font-family: sans-serif;
     margin-top: 0;
 }
 
 body {
+    font-family: 'Inter Tight';
     height: 100vh;
+    width: 100vw;
     background-image: linear-gradient(to bottom, rgb(12, 16, 21), rgb(0, 0, 0));
 }
 
@@ -48,126 +49,75 @@ body {
     background-color: rgba(212, 202, 205, 1);
 }
 
-#church-box {
-    left: 0px;
-
-}
-
-#church-img {
+.church-img {
     object-position: 0% 0%;
-
+    opacity: 1;
 }
 
-#cave-box {
-    left: 25%;
-
-}
-
-#cave-img {
+.cave-img {
     object-position: -500px 0px;
-
+    opacity: 1;
 }
 
-#surf-box {
-    left: 50%;
-
-}
-
-#surf-img {
+.surf-img {
     object-position: -600px 0px;
-
+    opacity: 1;
 }
 
-#tumbs-box {
-    left: 75%;
-
-}
-
-#tumbs-img {
+.tumbs-img {
     object-position: -500px 0px;
-
+    opacity: 1;
 }
 
 .label {
-    opacity: 0;
+    padding-top: 5px;
     text-align: left;
-    font-size: 14px;
+    font-family: 'Inter Tight';
+    font-weight: 200;
     color: rgb(212, 202, 205);
-
-}
-
-.box {
-    z-index: 1111;
-    width: 25%;
-    height: 100%;
-    background-color: rgba(0, 0, 255, 0);
-    opacity: 1;
-    position: absolute;
-    text-align: center;
-    margin-left: 0;
-    overflow: hidden;
+    opacity: 0;
 }
 
 .box:hover .label {
     opacity: 1;
+}
 
+.box {
+    flex: 1;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0);
+    opacity: 1;
+    margin-left: 0;
+    overflow: hidden;
+    transition: all 1s;
 }
 
 .box.active {
-    width: 100%;
-    z-index: 11111;
+    flex: 0 0 100%;
 }
 
-.box.active .label{
-    color: red;
+.image {
+    transition: all 1s;
+}
+
+.box.active .image {
+    object-position: 0px 0px;
 }
 
 .container {
-    z-index: 1;
-    width: 60%;
-    height: 60%;
-    top: 20%;
-    left: 20%;
-    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    width: 60vw;
+    height: 60vh;
+    top: 20vh;
+    left: 20vw;
+    background-color: rgba(255, 255, 255, 0);
     opacity: 1;
     position: absolute;
     text-align: center;
+    overflow: hidden;
 }
 
-
-
-.centerImage
-{
- text-align:center;
- display:block;
-}
-
-ul{
-    list-style: none;
-    padding: 0;
-    margin-top: 75px;
-}
-   
-li{
-    text-align: center;
-    text-transform: uppercase;
-    height: 70px;
-    line-height: 70px;
-    margin: 15px 0;
-    color: white;
-    cursor: pointer;
-    background-color: #00936E;
-    font-size: 1em;
-    letter-spacing: 0.2em;
-    transition: all 0.25s;
-}
-
-li:hover{
-    background-color: white;
-    color: black;
-    letter-spacing: 0.3em;
-    font-size: 1.5em
-}
 
 #footer {
     position: absolute;
