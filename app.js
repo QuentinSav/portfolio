@@ -1,24 +1,13 @@
 $(document).ready(function(){
     $("#push-btn-menu").on("click", function(){
         const div = document.querySelector('#push-btn-menu');
-        
         if (div.classList.contains('active')) {
             $("#push-btn-menu").removeClass("active");
-            $("#lgMenu").removeClass("active");
+            $(".nav").removeClass("active");
         } else {
             $("#push-btn-menu").addClass("active");
-            $("#lgMenu").addClass("active");
+            $(".nav").addClass("active");
         };
-    });
-});
-
-$(document).ready(function(){
-    const boxes = document.querySelectorAll('.box');
-
-    boxes.forEach((box) => {
-    box.addEventListener('click', () => {
-        box.classList.toggle('active');
-    });
     });
 });
 
