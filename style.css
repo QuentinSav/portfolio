@@ -4,8 +4,9 @@ html{
 
 body {
     font-family: 'Inter Tight';
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-image: linear-gradient(to bottom, rgb(12, 16, 21), rgb(0, 0, 0));
 }
 
